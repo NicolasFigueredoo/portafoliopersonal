@@ -1,5 +1,6 @@
 <?php
-       //llamando a las variables
+
+      //llamando a las variables
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];
     $correo = $_POST['correo'];
@@ -7,15 +8,17 @@
    
     //datos para el correo
     $destinatario = "gtytptsp@gmail.com";
-    $asunto = "Contacto de nightdrive";
+    $asunto = "Portafolio";
 
-    $carta = "De: $nombre . $apellido \n";
+    $carta = "De: $nombre $apellido \n";
     $carta .= "Correo: $correo \n";
     $carta .= "Mensaje: $mensaje";
 
     //enviando mensaje
+   
     mail($destinatario, $asunto, $carta);
-    header('location: index.html')
+    header('location:indexphp.html');
+    
 
 
 ?>
